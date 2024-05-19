@@ -1,0 +1,229 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: var(--img);
+    background-color: var(--background);
+    background-size: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+:root{
+    --searchb:rgb(27, 79, 156);
+    --background:#f0f0f0;
+    --navb:rgb(27, 79, 156);
+    --nav:#fff;
+    --container:rgb(27, 79, 156);
+    --response:#000;
+    --srch-hover: rgb(22, 49, 90);
+    --res: #f0f0f0;
+    --navborder: solid 3px rgb(27, 79, 156);
+    --img: url('img2.jpg');
+}
+.dark-theme{
+  --searchb:rgb(167, 126, 16);
+  --background:rgb(1, 2, 15);
+  --navb: rgb(167, 126, 16);
+  --nav:#7979792c;
+  --container:#7979792c;
+  --response:#fff;
+  --srch-hover: rgb(129, 98, 12);
+  --img: none;
+  --navborder: none;
+  --res: transparent;
+  transition: 0.5s;
+}
+.wall{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+}
+
+header{
+    border: var(--navborder);
+    display: flex;
+    justify-content: space-between;
+    width: calc(100% - 6px);
+    align-items: center;
+    margin-top: 5%;
+    background: var(--nav);
+    padding: 0 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.theme{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: fit-content;
+}
+
+.container {
+  width: 100%;
+  padding: 20px;
+  margin-top: 5%;
+  background-color: var(--container);
+  border-radius: 30px 30px 0 0;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    color: #fff;
+}
+
+input[type="text"] {
+    width: 75%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#languageButton{
+    background-color: var(--navb);
+    color: #fff;
+}
+#clblind{
+  margin-right: 15px;
+  background: var(--navb);
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+button:hover {
+    background-color: var(--blue);
+}
+
+#resultContainer {
+  margin-top: 20px;
+  width: 100%;
+  padding: 17px;
+  border: solid var(--container);
+  transform: translateY(-20px);
+  border-radius: 0 0 30px 30px;
+  z-index: -1;
+  border-top: none;
+  background: var(--res);
+}
+
+#resultContainer p {
+    margin-bottom: 10px;
+    color: var(--response);
+    font-size: 20px;
+}
+#searchButton{
+  border: solid 1px white;
+  background: var(--searchb);
+  color: #fff;
+}
+#searchButton p{
+  margin: 0;
+}
+#searchButton:hover{
+  background-color: var(--srch-hover);
+}
+
+/*************/
+/* The switch - the box around the slider */
+.switch {
+  font-size: 16px;
+  position: relative;
+  display: inline-block;
+  width: 3.5em;
+  height: 2em;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--navb);
+  transition: .4s;
+  border-radius: 30px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 1.4em;
+  width: 1.4em;
+  border-radius: 20px;
+  left: 0.3em;
+  bottom: 0.3em;
+  background-color: rgb(219, 198, 2);
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: var(--navb);
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px var(--navb);
+}
+
+input:checked + .slider:before {
+  transform: translateX(1.5em);
+}
+
+.slider::after {
+  width: 20px;
+  height: 20px;
+  left: 20%;
+  top: 10%;
+  border-radius: 50%;
+  position: absolute;
+  content: "";
+  background-color: var(--navb);
+  transition: ease 0.4s;
+}
+
+input:checked + .slider::after {
+  left: 80%;
+  width: 0px;
+  height: 0px;
+}
+
+    /* Some basic styling for the button */
+#readButton {
+  display: block;
+  margin: 20px auto;
+  padding: 10px 20px;
+  font-size: 13.33333px;
+  background-color: var(--navb);
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  height: 32p;
+  margin-right: 15px;
+}
+
+
